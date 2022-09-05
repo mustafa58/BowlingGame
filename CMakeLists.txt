@@ -5,10 +5,10 @@ set(CMAKE_C_STANDARD 99)
 
 add_custom_command(
         OUTPUT  ${CMAKE_CURRENT_SOURCE_DIR}/BowlingGame/BowlingTest.t.c
-        COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/BowlingGame/tddc
+        COMMAND ${CMAKE_BINARY_DIR}/tddc
                       ${CMAKE_CURRENT_SOURCE_DIR}/BowlingGame/BowlingTest.c
         DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/BowlingGame/BowlingTest.c
-                ${CMAKE_CURRENT_SOURCE_DIR}/BowlingGame/tddc
+                ${CMAKE_BINARY_DIR}/tddc
 )
 
 add_executable(BowlingGame main.c
